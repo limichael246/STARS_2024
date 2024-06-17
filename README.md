@@ -1,2 +1,2 @@
-# STARS_2024_-D
+# STARS_2024
 Description (optional)
