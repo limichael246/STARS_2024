@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-18T19:08:11.023Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="Z-NWFfueAQl9E5H4-2Jq" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-18T19:09:00.601Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="uG_ryqHATnia_PghIQDf" version="24.5.5" type="github">
   <diagram name="Page-1" id="ycvLj_skd1MdqMB_FMJK">
-    <mxGraphModel dx="255" dy="326" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1379" dy="673" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -220,15 +220,6 @@
         <mxCell id="cdJBSbvTCDBfxU9DAR3Z-81" value="high signal:MemWrite&lt;div&gt;(from Control Unit)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1130" y="880" width="120" height="15" as="geometry" />
         </mxCell>
-        <mxCell id="cdJBSbvTCDBfxU9DAR3Z-83" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" target="cdJBSbvTCDBfxU9DAR3Z-16">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1160" y="620" as="sourcePoint" />
-            <mxPoint x="1030" y="690" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="1160" y="533" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="cdJBSbvTCDBfxU9DAR3Z-84" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="cdJBSbvTCDBfxU9DAR3Z-38" target="cdJBSbvTCDBfxU9DAR3Z-85">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="880" y="640" as="sourcePoint" />
@@ -345,6 +336,15 @@
         </mxCell>
         <mxCell id="cdJBSbvTCDBfxU9DAR3Z-132" value="&lt;span style=&quot;font-size: 6px;&quot;&gt;if(ALU_src is desserted)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;2nd ALU operand is the 2nd register file output&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;if(ALU_src is asserted)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 6px; background-color: initial;&quot;&gt;data memory contents designated by the&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;address input are replaced by read data&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1110" y="910" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cdJBSbvTCDBfxU9DAR3Z-133" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.735;exitY=0.195;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="cdJBSbvTCDBfxU9DAR3Z-16" target="cdJBSbvTCDBfxU9DAR3Z-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="980" y="630" as="sourcePoint" />
+            <mxPoint x="1030" y="580" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1160" y="533" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
