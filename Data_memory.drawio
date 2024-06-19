@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T20:13:34.335Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="rHO7w-OwpUyMwXc0r_52" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-19T20:45:27.806Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="BlYYfs6_l4I2HxKIwW-8" version="24.5.5" type="github">
   <diagram name="Trang-1" id="H_r4qNMvlrrulFxureWI">
-    <mxGraphModel dx="808" dy="872" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="869" dy="374" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -9,21 +9,21 @@
         </mxCell>
         <mxCell id="SlMsK9wnepzmydgbSHyS-2" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.006;entryY=0.804;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="120" y="440" as="sourcePoint" />
-            <mxPoint x="250.00000000000006" y="440.0000000000001" as="targetPoint" />
+            <mxPoint x="120" y="380" as="sourcePoint" />
+            <mxPoint x="250.00000000000006" y="380.0000000000001" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="SlMsK9wnepzmydgbSHyS-3" value="Read data 2 [31:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="150" y="400" width="80" height="30" as="geometry" />
+          <mxGeometry x="150" y="390" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SlMsK9wnepzmydgbSHyS-4" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="120" y="300" as="sourcePoint" />
-            <mxPoint x="250" y="300" as="targetPoint" />
+            <mxPoint x="120" y="279.13000000000005" as="sourcePoint" />
+            <mxPoint x="250" y="279.13000000000005" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SlMsK9wnepzmydgbSHyS-5" value="Reg_Out [31:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="150" y="260" width="80" height="30" as="geometry" />
+        <mxCell id="SlMsK9wnepzmydgbSHyS-5" value="Address [31:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="150" y="240" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SlMsK9wnepzmydgbSHyS-6" value="Write data" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="250" y="420" width="60" height="30" as="geometry" />
@@ -59,7 +59,7 @@
             <mxPoint x="680" y="310" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SlMsK9wnepzmydgbSHyS-13" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Memory Handler&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;If (MemRead = 1 &amp;amp;&amp;amp; MemWrite = 0)&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Out_mem = M[Register_out]&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;If (MemWrite = 1 &amp;amp;&amp;amp; MemRead = 0)&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Case:&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;(Store Byte)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;M[Reg_out[7:0]] = Read_data2[7:0]&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Case:&amp;nbsp;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;(Store Halfword)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;M[Reg_out[15:0]] = Read_data2 [15:0]&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+        <mxCell id="SlMsK9wnepzmydgbSHyS-13" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Memory Handler&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;If (MemRead = 1 &amp;amp;&amp;amp; MemWrite = 0)&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Out_mem = M[addr]&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;If (MemWrite = 1 &amp;amp;&amp;amp; MemRead = 0)&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Case:&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;(Store Byte)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;M[addr[7:0]] = Read_data2[7:0]&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Case:&amp;nbsp;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;(Store Halfword)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;M[addr[15:0]] = Read_data2 [15:0]&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="310" y="220" width="260" height="290" as="geometry" />
         </mxCell>
         <mxCell id="SlMsK9wnepzmydgbSHyS-14" value="Out_mem [31:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
