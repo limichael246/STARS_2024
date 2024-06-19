@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T14:27:41.351Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="4yEUcdc9WnMrrS_uSVbl" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-19T14:28:11.351Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="gKY_sIbZ5IcShdMUMJau" version="24.5.5" type="github">
   <diagram name="Page-1" id="hJIKlYoYh9tqUhOvAnFu">
     <mxGraphModel dx="779" dy="432" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -25,7 +25,7 @@
         <mxCell id="zQOek3tgbETVmvYBOYxM-15" value="Memory" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="640" y="120" width="160" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="zQOek3tgbETVmvYBOYxM-17" value="&lt;b&gt;Parallel Data Transfer&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;always @ (posedge clk, negedge nrst)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;if (~nrst)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;data = 0&lt;/div&gt;&lt;div&gt;ready = 0&lt;/div&gt;&lt;div&gt;&lt;b&gt;if(ready)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;data_mem = data_in&lt;/div&gt;&lt;div&gt;ready = 0&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="zQOek3tgbETVmvYBOYxM-17" value="&lt;b&gt;Parallel Data Transfer&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;always @ (posedge clk, &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;negedge nrst)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&amp;nbsp; if (~nrst)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;data = 0&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ready = 0&lt;/div&gt;&lt;div&gt;&lt;b&gt;&amp;nbsp; if(ready)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;data_mem = data_in&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ready = 0&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
           <mxGeometry x="400" y="120" width="160" height="230" as="geometry" />
         </mxCell>
         <mxCell id="zQOek3tgbETVmvYBOYxM-19" value="data_in" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
