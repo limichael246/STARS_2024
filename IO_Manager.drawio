@@ -1,53 +1,158 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T01:43:03.429Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="TQYOolEuJCUciDbAEvjc" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-19T02:05:05.858Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="i3Klyucj18uYWjQQjJwZ" version="24.5.5" type="github">
   <diagram name="Page-1" id="5N3FuZsPKprVkAYtZtM9">
     <mxGraphModel dx="1032" dy="418" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="R8gj5nb3La20g2x7-yIn-10" value="ReadAddress [5:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="209" y="305" width="110" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="R8gj5nb3La20g2x7-yIn-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="200" width="200" height="200" as="geometry" />
+        <mxCell id="R8gj5nb3La20g2x7-yIn-1" value="logic current_operator&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;always(nRST)&lt;/div&gt;&lt;div&gt;if (~nRST)&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;current_operator = CPU&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;CPUgoFlag = 1&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;PerGoFlag = 0&lt;br&gt;&lt;/div&gt;&lt;div&gt;else&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;if current_operator == CPU&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Address = CPUAddress&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;if CPUReadOrWrite == Read&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;CPUReadData = ReadData&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;else //write&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;WriteData = CPUWrite Data&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;if CPUCompleteFlag&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;current_operator == PERIPHERALS&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;CPUgoFlag = 0&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;PerGoFlag = 1&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;else //current_operator == PERIPHERALS&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Address = PerAddress&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;if PerReadOrWrite == Read&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;P&lt;/span&gt;erReadData = ReadData&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;else //write&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;WriteData = PerRightData&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;if PerCompleteFlag&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;current_operator == CPU&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;CPUGoFlag = 1&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;PerGoFlag = 0&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="280" height="520" as="geometry" />
         </mxCell>
         <mxCell id="R8gj5nb3La20g2x7-yIn-2" value="Memory" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="200" width="120" height="200" as="geometry" />
+          <mxGeometry y="200" width="120" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="R8gj5nb3La20g2x7-yIn-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.002;exitY=0.134;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.017;entryY=0.134;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="R8gj5nb3La20g2x7-yIn-1" target="R8gj5nb3La20g2x7-yIn-2">
+        <mxCell id="R8gj5nb3La20g2x7-yIn-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.002;exitY=0.36;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.017;entryY=0.134;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="R8gj5nb3La20g2x7-yIn-2">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="400" as="sourcePoint" />
-            <mxPoint x="450" y="350" as="targetPoint" />
+            <mxPoint x="239.5999999999999" y="227.20000000000005" as="sourcePoint" />
+            <mxPoint x="370" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="R8gj5nb3La20g2x7-yIn-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.002;exitY=0.134;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.017;entryY=0.134;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="319" y="255" as="sourcePoint" />
-            <mxPoint x="201" y="255" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="R8gj5nb3La20g2x7-yIn-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.002;exitY=0.134;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.017;entryY=0.134;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="320" y="330" as="sourcePoint" />
-            <mxPoint x="202" y="330" as="targetPoint" />
+            <mxPoint x="239" y="255" as="sourcePoint" />
+            <mxPoint x="121" y="255" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="R8gj5nb3La20g2x7-yIn-6" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.002;exitY=0.134;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.017;entryY=0.134;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="201" y="358" as="sourcePoint" />
-            <mxPoint x="319" y="358" as="targetPoint" />
+            <mxPoint x="120" y="285" as="sourcePoint" />
+            <mxPoint x="238" y="285" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="R8gj5nb3La20g2x7-yIn-8" value="WriteAddress [5:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="210" y="200" width="110" height="30" as="geometry" />
+        <mxCell id="R8gj5nb3La20g2x7-yIn-8" value="Address [5:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="200" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="R8gj5nb3La20g2x7-yIn-9" value="WriteData [31:0]&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22WriteAddress%20%5B5%3A0%5D%22%20style%3D%22text%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3BwhiteSpace%3Dwrap%3Brounded%3D0%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22210%22%20y%3D%22200%22%20width%3D%22110%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="210" y="230" width="110" height="30" as="geometry" />
+          <mxGeometry x="130" y="230" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="R8gj5nb3La20g2x7-yIn-11" value="ReadData[31:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="206" y="333" width="110" height="30" as="geometry" />
+          <mxGeometry x="125" y="260" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="R8gj5nb3La20g2x7-yIn-12" value="Memory Manager" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="395" y="285" width="60" height="30" as="geometry" />
+          <mxGeometry x="350" y="50" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-13" value="Peripherals" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="320" width="120" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-14" value="CPU" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="40" width="120" height="241" as="geometry" />
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.013;exitY=0.45;exitDx=0;exitDy=0;entryX=-0.005;entryY=0.97;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="R8gj5nb3La20g2x7-yIn-1" target="R8gj5nb3La20g2x7-yIn-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="300" as="sourcePoint" />
+            <mxPoint x="600" y="276" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-16" value="CPUgoFlag" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="565" y="251" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-21" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1.003;entryY=0.124;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="678.68" y="63.25" as="sourcePoint" />
+            <mxPoint x="519.2799999999999" y="67.48000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-22" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.027;exitY=0.375;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.013;entryY=0.174;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="681.9200000000002" y="93.375" as="sourcePoint" />
+            <mxPoint x="521.2799999999999" y="93.48000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.037;exitY=0.697;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.987;entryY=0.323;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="674.2399999999999" y="170.9770000000001" as="sourcePoint" />
+            <mxPoint x="516.08" y="170.96000000000004" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-24" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.016;exitY=0.381;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.005;entryY=0.819;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="130.74" as="sourcePoint" />
+            <mxPoint x="677.3999999999999" y="129.99900000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-28" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.005;entryY=0.935;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="552" as="sourcePoint" />
+            <mxPoint x="680" y="552" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-29" value="PerGoFlag" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="569" y="528" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-31" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.113;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.003;entryY=0.592;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="R8gj5nb3La20g2x7-yIn-13" target="R8gj5nb3La20g2x7-yIn-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="347" as="sourcePoint" />
+            <mxPoint x="542" y="347" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.016;exitY=0.229;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.994;entryY=0.645;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="R8gj5nb3La20g2x7-yIn-13" target="R8gj5nb3La20g2x7-yIn-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="659" y="375" as="sourcePoint" />
+            <mxPoint x="541" y="375" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-33" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.541;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.99;entryY=0.788;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="R8gj5nb3La20g2x7-yIn-13" target="R8gj5nb3La20g2x7-yIn-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="450" as="sourcePoint" />
+            <mxPoint x="542" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-34" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.994;exitY=0.842;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.011;entryY=0.661;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="518.8200000000002" y="404.8399999999999" as="sourcePoint" />
+            <mxPoint x="679.1799999999998" y="405.64" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-38" value="CPUReadOrWrite" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="145" width="131.68" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-39" value="CPUAddress [5:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="40" width="132.68" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-40" value="CPUWriteData [31:0]&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22WriteAddress%20%5B5%3A0%5D%22%20style%3D%22text%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3BwhiteSpace%3Dwrap%3Brounded%3D0%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22210%22%20y%3D%22200%22%20width%3D%22110%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="540" y="70" width="122.68" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-41" value="CPUReadData[31:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="540.8399999999999" y="100" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-42" value="PerReadOrWrite" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="425" width="123" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-43" value="PerAddress [5:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="320" width="124" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-44" value="PerWriteData [31:0]&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22WriteAddress%20%5B5%3A0%5D%22%20style%3D%22text%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3BwhiteSpace%3Dwrap%3Brounded%3D0%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22210%22%20y%3D%22200%22%20width%3D%22110%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="544" y="350" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-45" value="PerReadData[31:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="540.5" y="380" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-48" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.013;exitY=0.45;exitDx=0;exitDy=0;entryX=-0.005;entryY=0.97;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="679" y="251" as="sourcePoint" />
+            <mxPoint x="523" y="251" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-49" value="CPUCompleteFlag" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="565" y="228" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-51" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.005;entryY=0.935;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="680" y="534" as="sourcePoint" />
+            <mxPoint x="520" y="534" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R8gj5nb3La20g2x7-yIn-52" value="PerCompleteFlag" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="569" y="510" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
