@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T14:07:00.460Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="fV96pQmdfahj8alhZ3Xz" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-19T14:55:52.528Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="OjsS-jo6U2-BWRPBW_rl" version="24.5.5" type="github">
   <diagram name="Trang-1" id="H_r4qNMvlrrulFxureWI">
-    <mxGraphModel dx="441" dy="521" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="495" dy="521" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -59,7 +59,7 @@
             <mxPoint x="680" y="310" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SlMsK9wnepzmydgbSHyS-13" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Data Memory&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;If (MemRead = 1 &amp;amp;&amp;amp; MemWrite = 0)&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Out_mem = M[ALU_result]&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;If (MemWrite = 1 &amp;amp;&amp;amp; MemRead = 0)&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;M[ALU_result] = Read_data 2&lt;br&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+        <mxCell id="SlMsK9wnepzmydgbSHyS-13" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Memory Handler&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;If (MemRead = 1 &amp;amp;&amp;amp; MemWrite = 0)&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Out_mem = M[ALU_result]&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;If (MemWrite = 1 &amp;amp;&amp;amp; MemRead = 0)&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;M[ALU_result] = Read_data 2&lt;br&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="330" y="210" width="200" height="290" as="geometry" />
         </mxCell>
         <mxCell id="SlMsK9wnepzmydgbSHyS-14" value="Out_mem [31:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
