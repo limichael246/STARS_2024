@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T15:02:35.399Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="tZtvLkh0rY7ILOr5Irr_" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-19T15:04:28.503Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="VAtd71DvcSDQguBcCdz8" version="24.5.5" type="github">
   <diagram name="Page-1" id="UpYlr5SDMnZ8a_nCScI9">
-    <mxGraphModel dx="1682" dy="1437" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1479" dy="1355" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -174,7 +174,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="yXjf_DAoQnlipOI_uSRa-67" value="MemEnableWrite" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="yXjf_DAoQnlipOI_uSRa-67" value="MemEnableRead" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="738" y="80" width="92" height="27" as="geometry" />
         </mxCell>
         <mxCell id="yXjf_DAoQnlipOI_uSRa-70" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="yXjf_DAoQnlipOI_uSRa-65" target="yXjf_DAoQnlipOI_uSRa-3" edge="1">
@@ -483,6 +483,18 @@
         </mxCell>
         <mxCell id="RlM1xWc07QcsKekBhpMz-5" value="Func7 [5:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="700" y="228.5" width="77" height="28.5" as="geometry" />
+        </mxCell>
+        <mxCell id="8Gte9jZPgztsGGZdeEs2-95" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="114" as="sourcePoint" />
+            <mxPoint x="1100" y="490" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1101" y="115" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8Gte9jZPgztsGGZdeEs2-96" value="MemEnableWrite" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="729" y="95" width="92" height="27" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
