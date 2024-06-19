@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T21:13:44.771Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="NC77Pd0Z9djfj5VdLgJJ" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-19T21:29:26.010Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="mbhpWi94PGJAd9XPKcHF" version="24.5.5" type="github">
   <diagram name="Trang-1" id="H_r4qNMvlrrulFxureWI">
     <mxGraphModel dx="1604" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -68,7 +68,7 @@
         <mxCell id="d4G7tELL4zlHv5mUzbre-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="680" y="190" width="340" height="340" as="geometry" />
         </mxCell>
-        <mxCell id="d4G7tELL4zlHv5mUzbre-3" value="If LBU&lt;div&gt;WritetoReg = {24&#39;b0, Out_mem[7:0]&lt;/div&gt;&lt;div&gt;If LB&lt;/div&gt;&lt;div&gt;WritetoReg = {Out_mem[7], Out_mem[7:0]&lt;/div&gt;&lt;div&gt;If LHU&lt;/div&gt;&lt;div&gt;WritetoReg = {16&#39;b0, Out_mem[15:0]&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;WritetoReg = {Out_mem[16], Out_mem[15:0]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="d4G7tELL4zlHv5mUzbre-3" value="If LBU&lt;div&gt;WritetoReg = {24&#39;b0, Out_mem[7:0]&lt;/div&gt;&lt;div&gt;If LB&lt;/div&gt;&lt;div&gt;WritetoReg = {24&#39;Out_mem[7], Out_mem[7:0]&lt;/div&gt;&lt;div&gt;If LHU&lt;/div&gt;&lt;div&gt;WritetoReg = {16&#39;b0, Out_mem[15:0]&lt;/div&gt;&lt;div&gt;if LH&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;WritetoReg = {16&#39;Out_mem[16], Out_mem[15:0]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="690" y="300" width="290" height="140" as="geometry" />
         </mxCell>
         <mxCell id="d4G7tELL4zlHv5mUzbre-4" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
