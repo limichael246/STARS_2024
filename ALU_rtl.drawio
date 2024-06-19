@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T15:22:20.401Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="KmmpM1Nyyx3dNozMN3-U" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-19T15:28:53.826Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="A2RUeJaMvxZzdHQZCoKv" version="24.5.5" type="github">
   <diagram name="Page-1" id="ycvLj_skd1MdqMB_FMJK">
-    <mxGraphModel dx="1723" dy="842" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1293" dy="631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -135,7 +135,7 @@
           <mxGeometry x="700" y="675" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="cdJBSbvTCDBfxU9DAR3Z-54" value="ALU Control Unit" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="600" y="655" width="100" height="10" as="geometry" />
+          <mxGeometry x="600" y="640" width="100" height="25" as="geometry" />
         </mxCell>
         <mxCell id="cdJBSbvTCDBfxU9DAR3Z-56" value="&lt;div&gt;&amp;nbsp;func3/ALU_op&lt;/div&gt;&lt;div&gt;(from control unit)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="745" y="806.25" width="150" height="20" as="geometry" />
@@ -223,12 +223,12 @@
         </mxCell>
         <mxCell id="cdJBSbvTCDBfxU9DAR3Z-104" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.789;exitY=0.523;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="930" y="372.5" as="sourcePoint" />
-            <mxPoint x="1370.0000000000002" y="639.9999999999999" as="targetPoint" />
+            <mxPoint x="930" y="366.25" as="sourcePoint" />
+            <mxPoint x="1370.0000000000002" y="633.7499999999999" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="930" y="445" />
-              <mxPoint x="840" y="445" />
-              <mxPoint x="840" y="640" />
+              <mxPoint x="930" y="438.75" />
+              <mxPoint x="840" y="438.75" />
+              <mxPoint x="840" y="633.75" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -275,7 +275,7 @@
           <mxGeometry x="20" y="100" width="260" height="180" as="geometry" />
         </mxCell>
         <mxCell id="cdJBSbvTCDBfxU9DAR3Z-130" value="&lt;span style=&quot;font-size: 6px;&quot;&gt;if(ALU_src is desserted)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;2nd ALU operand is the 2nd register file output&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;if(ALU_src is asserted)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;2nd ALU operand is the sign-extended (12 bits of Instr)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="150" y="711.25" width="170" height="90" as="geometry" />
+          <mxGeometry x="360" y="566.25" width="190" height="108.75" as="geometry" />
         </mxCell>
         <mxCell id="cdJBSbvTCDBfxU9DAR3Z-131" value="&lt;span style=&quot;font-size: 6px;&quot;&gt;if(MemRead is desserted)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;nothing happens&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;if(&lt;/span&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;MemRead&lt;/span&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;&amp;nbsp;is asserted)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;data memory contents designated by the&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;address input are replaced by write data&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1505" y="465" width="170" height="90" as="geometry" />
