@@ -1,14 +1,14 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T15:27:36.106Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="ZIbgylEa1j6UzNjrjHeN" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-19T17:39:29.617Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="emlB7m8T76r64kOwcb58" version="24.5.5" type="github">
   <diagram name="Page-1" id="NBaVzd6jnGeTVgfEtgDP">
-    <mxGraphModel dx="1518" dy="1714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1173" dy="1575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="QF4taupE5QL_7I8sE1Tv-3" value="Input:&lt;div&gt;&amp;nbsp;- jumpDist [11:0]&lt;/div&gt;&lt;div&gt;&amp;nbsp;- forceJump&lt;/div&gt;&lt;div&gt;&amp;nbsp;- condJump&lt;/div&gt;&lt;div&gt;&amp;nbsp;- sendLink&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Output:&lt;/div&gt;&lt;div&gt;&amp;nbsp;- nextInstructionAddress [5:0]&lt;/div&gt;&lt;div&gt;&amp;nbsp;- linkAddress [5:0]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="160" y="40" width="200" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="QF4taupE5QL_7I8sE1Tv-4" value="Logic:&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;alwaysff(nRst):&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;if ~nRst:&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;nextInstructionAddress&amp;nbsp;= 0&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;else&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;if(sendLink)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;linkAddress = nextInstruction+4&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;if forceJump or condJump:&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;nextInstruction&amp;nbsp;+= jumpDist&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;else:&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;nextInstruction+= 4&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="160" y="240" width="280" height="200" as="geometry" />
+        <mxCell id="QF4taupE5QL_7I8sE1Tv-4" value="Logic:&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;alwaysff(nRst):&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;if ~nRst:&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;nextInstructionAddress&amp;nbsp;= 0&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;else&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;if(sendLink)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;linkAddress = nextInstruction+4&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;if forceJump or condJump:&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;if doRegJump&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;nextInstruction = regJump + immJump&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;else&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;nextInstruction&amp;nbsp;+= immDist&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;else:&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;nextInstruction+= 4&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="160" y="240" width="320" height="280" as="geometry" />
         </mxCell>
         <mxCell id="QF4taupE5QL_7I8sE1Tv-5" value="Test cases:&lt;div&gt;&amp;nbsp;- reset&lt;/div&gt;&lt;div&gt;&amp;nbsp;- normal next instruction (no jump)&lt;/div&gt;&lt;div&gt;&amp;nbsp;- forceJump on&lt;/div&gt;&lt;div&gt;&amp;nbsp;- condJump on&lt;/div&gt;&lt;div&gt;&amp;nbsp;- both forceJump and condJump on (try jumpDist with several different numbers)&lt;/div&gt;&lt;div&gt;&amp;nbsp;- forceJump with sendLink on&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="520" y="240" width="280" height="200" as="geometry" />
@@ -19,17 +19,17 @@
         <mxCell id="QF4taupE5QL_7I8sE1Tv-9" value="NextInstructionAddress[5:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="955" y="-130" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="QF4taupE5QL_7I8sE1Tv-11" value="JumpDist [5:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" vertex="1" parent="1">
-          <mxGeometry x="664.75" y="-10.75" width="78.5" height="30" as="geometry" />
+        <mxCell id="QF4taupE5QL_7I8sE1Tv-11" value="immJump [31:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="653.75" y="1.5" width="97" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QF4taupE5QL_7I8sE1Tv-13" value="condJump" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" vertex="1" parent="1">
-          <mxGeometry x="757" y="-13" width="60" height="30" as="geometry" />
+          <mxGeometry x="799" y="-9.5" width="60" height="23" as="geometry" />
         </mxCell>
         <mxCell id="QF4taupE5QL_7I8sE1Tv-15" value="forceJump" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" vertex="1" parent="1">
-          <mxGeometry x="721.25" y="-10.75" width="78.5" height="30" as="geometry" />
+          <mxGeometry x="760" y="-10.75" width="78.5" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QF4taupE5QL_7I8sE1Tv-18" value="sendLink" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" vertex="1" parent="1">
-          <mxGeometry x="794.25" y="-11.75" width="78.5" height="30" as="geometry" />
+          <mxGeometry x="832.75" y="-11.75" width="78.5" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QF4taupE5QL_7I8sE1Tv-19" value="LinkAddress [5:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=0;" vertex="1" parent="1">
           <mxGeometry x="920.0000000000001" y="-90" width="110.13" height="30" as="geometry" />
@@ -54,20 +54,38 @@
         </mxCell>
         <mxCell id="QF4taupE5QL_7I8sE1Tv-23" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.444;entryY=1.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="752" y="79" as="sourcePoint" />
-            <mxPoint x="751" y="-46" as="targetPoint" />
+            <mxPoint x="790.5" y="79" as="sourcePoint" />
+            <mxPoint x="789.5" y="-46" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="QF4taupE5QL_7I8sE1Tv-24" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.444;entryY=1.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="777" y="79" as="sourcePoint" />
-            <mxPoint x="776" y="-46" as="targetPoint" />
+            <mxPoint x="815.5" y="79" as="sourcePoint" />
+            <mxPoint x="814.5" y="-46" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="QF4taupE5QL_7I8sE1Tv-26" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.444;entryY=1.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="823" y="79" as="sourcePoint" />
-            <mxPoint x="822" y="-46" as="targetPoint" />
+            <mxPoint x="861.5" y="79" as="sourcePoint" />
+            <mxPoint x="860.5" y="-46" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QF4taupE5QL_7I8sE1Tv-27" value="RegJump [31:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="671.75" width="105" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QF4taupE5QL_7I8sE1Tv-28" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.444;entryY=1.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="716" y="80" as="sourcePoint" />
+            <mxPoint x="715.3599999999999" y="-44.6400000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QF4taupE5QL_7I8sE1Tv-36" value="doRegJump" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="730.75" y="-12.25" width="78.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QF4taupE5QL_7I8sE1Tv-37" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.444;entryY=1.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="761.25" y="77.5" as="sourcePoint" />
+            <mxPoint x="760.25" y="-47.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
