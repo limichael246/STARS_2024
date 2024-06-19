@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T01:10:42.062Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="CVE_FxOqg5VAO4kLLDvi" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-19T01:23:44.795Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="71tv2osgn_VmwyHYJFF2" version="24.5.5" type="github">
   <diagram name="Page-1" id="ycvLj_skd1MdqMB_FMJK">
-    <mxGraphModel dx="248" dy="316" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1120" dy="1443" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -426,6 +426,12 @@
         </mxCell>
         <mxCell id="cdJBSbvTCDBfxU9DAR3Z-202" value="[4:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="710" y="615" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cdJBSbvTCDBfxU9DAR3Z-203" value="Input:&lt;div&gt;-regA[31:0]&lt;/div&gt;&lt;div&gt;-regB[31:0]&lt;/div&gt;&lt;div&gt;(select signals)&lt;/div&gt;&lt;div&gt;-opcode[6:0]&lt;/div&gt;&lt;div&gt;-func3[2:0]&lt;/div&gt;&lt;div&gt;-finc7[6:0]&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Output:&lt;/div&gt;&lt;div&gt;-ALUresult[31:0]&lt;/div&gt;&lt;div&gt;-0flag&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" vertex="1" parent="1">
+          <mxGeometry x="60" y="220" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="cdJBSbvTCDBfxU9DAR3Z-204" value="Test Cases:&lt;div&gt;-all possible combination of opcode, func3 and func7 ( 26 combinations)&lt;/div&gt;&lt;div&gt;-different corner cases for operands&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;all 0s&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;all 1s&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;all 5s&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;all Fs&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;pattern 0000 FFFF&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;pattern FFFF 0000&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" vertex="1" parent="1">
+          <mxGeometry x="265" y="40" width="200" height="200" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
