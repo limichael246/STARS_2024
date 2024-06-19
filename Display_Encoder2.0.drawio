@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T18:07:59.366Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="n4ddTlv7B_QQpg0uftZ_" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-19T18:08:17.393Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="GZXtwU7uRvVpNfwC2VrF" version="24.5.5" type="github">
   <diagram name="Page-1" id="yu1hhraFgdrDqdv_gLaq">
     <mxGraphModel dx="1705" dy="945" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -166,7 +166,7 @@
         <mxCell id="a_h_QdSzYZ5ICD9QuQ7M-52" value="HSYNC" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="964" y="740" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="a_h_QdSzYZ5ICD9QuQ7M-55" value="Enable Data Send&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;amp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Counter&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="a_h_QdSzYZ5ICD9QuQ7M-55" value="Enable Data Send" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1276" y="860" width="140" height="124" as="geometry" />
         </mxCell>
         <mxCell id="a_h_QdSzYZ5ICD9QuQ7M-56" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1">
