@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T14:33:39.648Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="ziUXitbWOWo-2eOewE_n" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-19T14:46:09.831Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="cqJAfFT8bf3DNcWmI_jH" version="24.5.5" type="github">
   <diagram name="Page-1" id="ycvLj_skd1MdqMB_FMJK">
-    <mxGraphModel dx="1880" dy="918" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="795" dy="388" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -137,8 +137,8 @@
         <mxCell id="cdJBSbvTCDBfxU9DAR3Z-54" value="ALU Control Unit" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="600" y="655" width="100" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="cdJBSbvTCDBfxU9DAR3Z-56" value="&lt;div&gt;&amp;nbsp;func3&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="720" y="815" width="150" height="20" as="geometry" />
+        <mxCell id="cdJBSbvTCDBfxU9DAR3Z-56" value="&lt;div&gt;&amp;nbsp;func3/ALU_op&lt;/div&gt;&lt;div&gt;(from control unit)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="745" y="806.25" width="150" height="20" as="geometry" />
         </mxCell>
         <mxCell id="cdJBSbvTCDBfxU9DAR3Z-59" value="high signal: ALU_src&lt;div&gt;(from Control Unit)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="380" y="545" width="115" height="20" as="geometry" />
