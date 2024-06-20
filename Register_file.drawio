@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T18:13:08.936Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="Zyn5VwB3E43O6ytJWsT2" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-20T19:40:13.561Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="QVt61dghtbfCv3UGbX81" version="24.5.5" type="github">
   <diagram name="Page-1" id="wuHofpRlIjOz16M0MwDM">
-    <mxGraphModel dx="1623" dy="697" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1217" dy="523" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -46,18 +46,6 @@
         <mxCell id="8H5cPtk94cY6zMzIsbHH-11" value="Write register" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="170" y="390" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="8H5cPtk94cY6zMzIsbHH-12" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="320" y="100" as="sourcePoint" />
-            <mxPoint x="320" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="8H5cPtk94cY6zMzIsbHH-13" value="" style="triangle;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
-          <mxGeometry x="300" y="90" width="35" height="55" as="geometry" />
-        </mxCell>
-        <mxCell id="8H5cPtk94cY6zMzIsbHH-14" value="Clock" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="287.5" y="130" width="60" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="8H5cPtk94cY6zMzIsbHH-15" value="write enable" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="530" y="115" width="60" height="30" as="geometry" />
         </mxCell>
@@ -73,14 +61,14 @@
             <mxPoint x="770" y="480" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8H5cPtk94cY6zMzIsbHH-18" value="data write" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="8H5cPtk94cY6zMzIsbHH-18" value="write_data" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="170" y="470" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="8H5cPtk94cY6zMzIsbHH-19" value="data read 0" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="590" y="250" width="60" height="30" as="geometry" />
+        <mxCell id="8H5cPtk94cY6zMzIsbHH-19" value="read_data_1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="580" y="240" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="8H5cPtk94cY6zMzIsbHH-20" value="data read 1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="580" y="470" width="60" height="30" as="geometry" />
+        <mxCell id="8H5cPtk94cY6zMzIsbHH-20" value="read_data_2" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="580" y="460" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="8H5cPtk94cY6zMzIsbHH-21" value="&lt;div&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;logic [31:0] reg_file [31:0],&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;font face=&quot;g4V9aiBi4kP1bZjgguHr&quot; size=&quot;3&quot; style=&quot;&quot;&gt;&lt;div&gt;assign reg_file[0] = 0&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;If (!nrst)&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;g4V9aiBi4kP1bZjgguHr&quot; size=&quot;3&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;reg_file &amp;lt;= &#39;0&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;g4V9aiBi4kP1bZjgguHr&quot; size=&quot;3&quot;&gt;&lt;span style=&quot;background-color: initial; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;if(enable)&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;g4V9aiBi4kP1bZjgguHr&quot; size=&quot;3&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;data write[write_register] = data write&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;g4V9aiBi4kP1bZjgguHr&quot; size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;g4V9aiBi4kP1bZjgguHr&quot; size=&quot;3&quot;&gt;&lt;span style=&quot;background-color: initial; white-space: pre;&quot;&gt;data&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;read 0 = read register 0;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;g4V9aiBi4kP1bZjgguHr&quot; size=&quot;3&quot;&gt;data read 1 = read register 1;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="240" y="155" width="320" height="215" as="geometry" />
@@ -112,8 +100,20 @@
         <mxCell id="8H5cPtk94cY6zMzIsbHH-31" value="reg 31" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="280" y="550" width="190" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="DQG7pjrKMhIXRIExHFe8-1" value="................." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="DQG7pjrKMhIXRIExHFe8-1" value="................." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="345" y="480" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8nCNz-82o0ZJ2Y-EGQQ4-1" value="" style="triangle;whiteSpace=wrap;html=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="230" y="560" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8nCNz-82o0ZJ2Y-EGQQ4-3" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="244.87" y="660" as="sourcePoint" />
+            <mxPoint x="244.87" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8nCNz-82o0ZJ2Y-EGQQ4-4" value="Clock" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="560" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
