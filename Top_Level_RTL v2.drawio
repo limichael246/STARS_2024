@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-21T04:02:07.827Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="u3PWLOSCmcGD7FwB3Q6h" version="24.6.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-21T04:03:17.947Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="l6-M03Qj80FPQuBJMDkk" version="24.6.0" type="github">
   <diagram name="Page-1" id="UpYlr5SDMnZ8a_nCScI9">
     <mxGraphModel dx="3587" dy="2035" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -607,8 +607,8 @@
             <mxPoint x="-290" y="-50" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="TBUdOXvlLJJETjnGP0sG-22" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Note to self&lt;br&gt;&lt;/h1&gt;&lt;p&gt;determine specifics about control cycle later&lt;/p&gt;&lt;p&gt;VGA may not need all signals&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-700" y="-310" width="180" height="120" as="geometry" />
+        <mxCell id="TBUdOXvlLJJETjnGP0sG-22" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Note to self&lt;br&gt;&lt;/h1&gt;&lt;p&gt;determine specifics about control cycle later&lt;/p&gt;&lt;p&gt;ask about wishbone stalling when VGA needs data&lt;br&gt;&lt;/p&gt;&lt;p&gt;VGA may not need all signals&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-700" y="-310" width="180" height="170" as="geometry" />
         </mxCell>
         <mxCell id="TBUdOXvlLJJETjnGP0sG-23" value="current_client [1:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" vertex="1" parent="1">
           <mxGeometry x="-504.5" y="-163" width="103" height="30" as="geometry" />
