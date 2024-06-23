@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-23T22:49:16.347Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="2WDNgEnmBffa02edFSlb" version="24.6.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-23T22:50:14.465Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="POqZRuBWurVIsyEL3pYi" version="24.6.2" type="github">
   <diagram name="Page-1" id="UpYlr5SDMnZ8a_nCScI9">
-    <mxGraphModel dx="4134" dy="2146" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3913" dy="2051" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -565,7 +565,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="TBUdOXvlLJJETjnGP0sG-22" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Note to self&lt;br&gt;&lt;/h1&gt;VGA should always be enabled, so no enable flag to VGA" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-1050" y="-260" width="180" height="170" as="geometry" />
+          <mxGeometry x="-1050" y="-225" width="180" height="170" as="geometry" />
         </mxCell>
         <mxCell id="TBUdOXvlLJJETjnGP0sG-23" value="VGA_state [1:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" parent="1" vertex="1">
           <mxGeometry x="-890" y="-144.75" width="103" height="30" as="geometry" />
