@@ -482,7 +482,7 @@ module tb;
         check_sel_to_mem(4'b1111);
         check_data_to_CPU(0);
         check_data_to_VGA(0);
-        check_data_to_UART(0);
+        check_data_to_UART(32'h911);
 
         #10; //check CPU receives signals
         check_CPU_enable(1);
