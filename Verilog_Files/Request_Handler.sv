@@ -174,63 +174,78 @@ module request_handler (
   end
 
   always_comb begin  //make connects based on current client
-    case (current_client)
-      VGA: begin
-        CPU_enable = 1'b0;
-        UART_enable = 1'b0;
-        data_to_CPU = 32'b0;
-        data_to_VGA = data_from_mem;
-        data_to_UART = 32'b0;
+    if(mem_busy) begin
+      CPU_enable = 1'b0;
+      UART_enable = 1'b0;
+      data_to_CPU = 32'b0;
+      data_to_VGA = 32'b0;
+      data_to_UART = 32'b0;
 
-        write_to_mem = write_from_VGA;
-        read_to_mem = read_from_VGA;
-        adr_to_mem = adr_from_VGA;
-        data_to_mem = data_from_VGA;
-        sel_to_mem = sel_from_VGA;
-      end
+      write_to_mem = 1'b0;
+      read_to_mem = 1'b0;
+      adr_to_mem = 32'b0;
+      data_to_mem = 32'b0;
+      sel_to_mem = 4'b0;
+    end else begin
+      case (current_client)
+        VGA: begin
+          CPU_enable = 1'b0;
+          UART_enable = 1'b0;
+          data_to_CPU = 32'b0;
+          data_to_VGA = data_from_mem;
+          data_to_UART = 32'b0;
 
-      CPU: begin
-        CPU_enable = 1'b1;
-        UART_enable = 1'b0;
-        data_to_CPU = data_from_mem;
-        data_to_VGA = 32'b0;
-        data_to_UART = 32'b0;
+          write_to_mem = write_from_VGA;
+          read_to_mem = read_from_VGA;
+          adr_to_mem = adr_from_VGA;
+          data_to_mem = data_from_VGA;
+          sel_to_mem = sel_from_VGA;
+        end
 
-        write_to_mem = write_from_CPU;
-        read_to_mem = read_from_CPU;
-        adr_to_mem = adr_from_CPU;
-        data_to_mem = data_from_CPU;
-        sel_to_mem = sel_from_CPU;
-      end
+        CPU: begin
+          CPU_enable = 1'b1;
+          UART_enable = 1'b0;
+          data_to_CPU = data_from_mem;
+          data_to_VGA = 32'b0;
+          data_to_UART = 32'b0;
 
-      UART: begin
-        CPU_enable = 1'b0;
-        UART_enable = 1'b1;
-        data_to_CPU = 32'b0;
-        data_to_VGA = 32'b0;
-        data_to_UART = data_from_mem;
+          write_to_mem = write_from_CPU;
+          read_to_mem = read_from_CPU;
+          adr_to_mem = adr_from_CPU;
+          data_to_mem = data_from_CPU;
+          sel_to_mem = sel_from_CPU;
+        end
 
-        write_to_mem = write_from_UART;
-        read_to_mem = read_from_UART;
-        adr_to_mem = adr_from_UART;
-        data_to_mem = data_from_UART;
-        sel_to_mem = sel_from_UART;
-      end
+        UART: begin
+          CPU_enable = 1'b0;
+          UART_enable = 1'b1;
+          data_to_CPU = 32'b0;
+          data_to_VGA = 32'b0;
+          data_to_UART = data_from_mem;
 
-      default: begin
-        CPU_enable = 1'b0;
-        UART_enable = 1'b0;
-        data_to_CPU = 32'b0;
-        data_to_VGA = data_from_mem;
-        data_to_UART = 32'b0;
+          write_to_mem = write_from_UART;
+          read_to_mem = read_from_UART;
+          adr_to_mem = adr_from_UART;
+          data_to_mem = data_from_UART;
+          sel_to_mem = sel_from_UART;
+        end
 
-        write_to_mem = write_from_VGA;
-        read_to_mem = read_from_VGA;
-        adr_to_mem = adr_from_VGA;
-        data_to_mem = data_from_VGA;
-        sel_to_mem = sel_from_VGA;
-      end
-    endcase
+        default: begin
+          CPU_enable = 1'b0;
+          UART_enable = 1'b0;
+          data_to_CPU = 32'b0;
+          data_to_VGA = data_from_mem;
+          data_to_UART = 32'b0;
+
+          write_to_mem = write_from_VGA;
+          read_to_mem = read_from_VGA;
+          adr_to_mem = adr_from_VGA;
+          data_to_mem = data_from_VGA;
+          sel_to_mem = sel_from_VGA;
+        end
+      endcase
+    end
+      
   end
 
 endmodule
