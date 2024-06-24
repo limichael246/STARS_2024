@@ -98,9 +98,10 @@ endmodule
 
 
 typedef enum logic [1:0] {
-  CPU = 2'b00,
-  VGA = 2'b01,
-  UART = 2'b10
+  NONE = 2'd0,
+  CPU = 2'd1,
+  VGA = 2'd2,
+  UART = 2'd3
 } current_client_t;
 
 typedef enum logic [1:0] {
@@ -159,7 +160,7 @@ module request_handler (
 
   always_ff @( posedge clk, negedge nRst ) begin //current client control
     if(~nRst) begin
-      current_client <= VGA;
+      current_client <= NONE;
     end else begin
       if (VGA_state == READY | VGA_state == ACTIVE) begin
         current_client <= VGA;
@@ -188,6 +189,20 @@ module request_handler (
       sel_to_mem = 4'b0;
     end else begin
       case (current_client)
+        NONE: begin
+            CPU_enable = 1'b0;
+            UART_enable = 1'b0;
+            data_to_CPU = 32'b0;
+            data_to_VGA = 32'b0;
+            data_to_UART = 32'b0;
+
+            write_to_mem = 1'b0;
+            read_to_mem = 1'b0;
+            adr_to_mem = 32'b0;
+            data_to_mem = 32'b0;
+            sel_to_mem = 4'b0;
+        end
+
         VGA: begin
           CPU_enable = 1'b0;
           UART_enable = 1'b0;
@@ -228,20 +243,6 @@ module request_handler (
           adr_to_mem = adr_from_UART;
           data_to_mem = data_from_UART;
           sel_to_mem = sel_from_UART;
-        end
-
-        default: begin
-          CPU_enable = 1'b0;
-          UART_enable = 1'b0;
-          data_to_CPU = 32'b0;
-          data_to_VGA = data_from_mem;
-          data_to_UART = 32'b0;
-
-          write_to_mem = write_from_VGA;
-          read_to_mem = read_from_VGA;
-          adr_to_mem = adr_from_VGA;
-          data_to_mem = data_from_VGA;
-          sel_to_mem = sel_from_VGA;
         end
       endcase
     end
