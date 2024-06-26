@@ -5,13 +5,13 @@
 
 
 module VGA_out(
-    input logic [31:0] SRAM_data_in,
-    input logic SRAM_busy,
+    input logic [31:0] SRAM_data_in, // These are 32 bits that the VGA receives from memory that gets sent as pixel_data
+    input logic SRAM_busy,          // SRAM busy flag, acts as an enable to send pixel_data
     input logic clk, nrst,
-    output logic data_en, // Can be used for the read 
-    output logic h_out, v_out, pixel_data,
-    output logic [31:0] word_address_dest, // 32 bit address line, VGA will only ever use 12 bits
-    output logic [3:0] byte_select, // directly tied to the data_en output
+    output logic data_en, // Can be used for the read signal sent to the wishbone
+    output logic h_out, v_out, pixel_data,   // outputs to the VGA plug in
+    output logic [31:0] word_address_dest, // 32 bit address line that points to memory, VGA will only ever use 12 bits
+    output logic [3:0] byte_select, // directly tied to the data_en output, says that it wants 4 bytes of data
     output logic [1:0] VGA_state, // 0 = inactive, 1 = about to be active, 2 = active
 
     //OUTPUTS ONLY FOR TEST BENCHING
@@ -256,173 +256,6 @@ module VGA_out(
     assign x_coord = 5'b11111 - h_count[5:1]; // READING FROM LEFT TO RIGHT, every 2 pixel, next bit
 
 
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                            //
-//  ADD IN A PLACEHOLDER REG FILE SO THAT NEW PIXEL DATA IS ON STANDBY AND NO TIMING MISHAP   //
-//                                                                                            //
-////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-//When x_coord == 5'b11111 , thats when we want to fetch the next register from SRAM and store it in a temp local register that can be called directly after x_coord == 0
-//
-
-
-
-        
-
-/*
-    always_comb begin
-        if (x_coord > 0) begin // starting bit of word
-            next_word = SRAM_data_in;
-        end else begin
-            next_word = next_word;
-        end
-    end
-
-    always_comb begin
-        
-        if (x_coord == 0) begin
-            current_word = next_word;
-        end else begin
-            current_word = current_word;
-        end
-        
-    end
-
-    */
-
-
-
-    
-
-/*
-    logic [31:0] register_old; // current word
-    logic [31:0] register_new; // next word
-    logic output_bit;
-    logic load_new;
-
-    typedef enum logic [1:0] {
-        IDLE,
-        OUTPUT_BITS,
-        LOAD_NEW_REGISTER
-    } data_swap;
-
-    data_swap state;
-
-    always_ff @(posedge clk or negedge nrst) begin
-        if (~nrst) begin
-            state <= IDLE;
-            load_new <= 0;
-        end else begin
-            case (state)
-                IDLE: begin
-                    register_old <= SRAM_data_in;
-                    state <= OUTPUT_BITS;
-                end
-
-                OUTPUT_BITS: begin
-                    output_bit <= register_old[x_coord];
-                    register_new <= SRAM_data_in;
-
-                    if (x_coord == 0) begin
-                        load_new <= 1;
-                        state <= LOAD_NEW_REGISTER;
-                    end 
-                end
-
-                LOAD_NEW_REGISTER: begin
-                    if (load_new) begin
-                        register_old <= register_new;
-                        load_new <= 0;
-                        state <= OUTPUT_BITS;
-                    end
-                end
-
-                default: state <= IDLE;
-            endcase
-        end
-    end
-
-
-
-
-
-*/
 endmodule
 
 
-
-// module VGA_data_controller (
-//     input logic clk, nrst,
-//     input logic [31:0] VGA_request_address, data_from_SRAM,
-//     input logic [9:0] h_count,
-//     input logic [1:0] VGA_state,
-//     input logic data_en, // Can be used for the read 
-//     input logic [3:0] byte_select_in, // directly tied to the data_en output
-//     output logic [3:0] byte_select_out, // directly tied to the data_en output
-//     output logic read,
-//     output logic [31:0] data_to_VGA, SRAM_address
-// );
-//     // logic [31:0] data_hold;
-//     // logic data_send_enable;
-
-//     // assign data_send_enable = &h_count[5:0];
-
-//     assign byte_select_out = byte_select_in;
-//     assign read = data_en;
-
-//     typedef enum logic [1:0] {
-//         IDLE,
-//         PREPARE_DATA,
-//         LOAD_NEW_REGISTER
-//     } state_type;
-
-//     state_type state;
-
-//     always_ff @(posedge clk or negedge nrst) begin
-//         if (~nrst) begin
-//             state <= IDLE;
-//             data_to_VGA <= data_from_SRAM;
-//         end else begin
-//             case (state)
-//                 IDLE: begin
-//                     data_to_VGA <= data_from_SRAM;
-//                     state <= LOAD_NEW_REGISTER;
-//                 end
-
-//                 LOAD_NEW_REGISTER: begin
-//                     data_to_VGA <= data_from_SRAM;
-//                     SRAM_address <= SRAM_address;
-//                     state <= PREPARE_DATA;
-//                 end
-
-//                 PREPARE_DATA: begin
-//                     if (VGA_state == 1) begin // preparing first word 
-//                         SRAM_address <= 32'h3E80; // base of SRAM storage
-//                         data_to_VGA <= data_from_SRAM;
-//                         state <= LOAD_NEW_REGISTER;
-//                     end
-                    
-//                     else if (h_count == 62) begin
-//                         state <= LOAD_NEW_REGISTER;
-//                     end else begin
-//                         SRAM_address <= VGA_request_address + 1; // preparing next word 
-//                         data_to_VGA <= data_to_VGA;
-//                         state <= PREPARE_DATA;
-//                     end
-
-//                 end
-
-//                 default: state <= IDLE;
-//             endcase
-//         end
-//     end
-
-
-
-
-
-
-// endmodule
