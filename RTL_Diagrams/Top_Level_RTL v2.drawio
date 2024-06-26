@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-24T20:01:16.796Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="vOWsrUqL6_DUbLuOALnj" version="24.6.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-26T18:15:13.231Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="dLnKNL5e8MtpkG8tfltk" version="24.6.2" type="github">
   <diagram name="Page-1" id="UpYlr5SDMnZ8a_nCScI9">
-    <mxGraphModel dx="2479" dy="1464" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3669" dy="2107" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -510,7 +510,7 @@
             <mxPoint x="-1079.96" y="160" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="TBUdOXvlLJJETjnGP0sG-9" value="SEL_I [4:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="TBUdOXvlLJJETjnGP0sG-9" value="SEL_I [3:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-1005" y="130" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="TBUdOXvlLJJETjnGP0sG-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.177;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
@@ -730,7 +730,7 @@
         <mxCell id="1FQuu1AdG6Wy8hCJEZAl-14" value="data_to_mem [31:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-540.48" y="160" width="110.96" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="1FQuu1AdG6Wy8hCJEZAl-16" value="sel [4:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="1FQuu1AdG6Wy8hCJEZAl-16" value="sel [3:0]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-544.9800000000001" y="116.5" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="1FQuu1AdG6Wy8hCJEZAl-18" value="write" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
@@ -958,8 +958,8 @@
             <mxPoint x="-559.9999999999999" y="146.49999999999997" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ReioHFYXnXfZGIvqxe50-1" value="input logic [31:0] regB, //from regfile" style="text;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-770" y="-180" width="220" height="40" as="geometry" />
+        <mxCell id="ReioHFYXnXfZGIvqxe50-1" value="input logic [31:0] regB, //from regfile" style="text;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-560" y="-127.75" width="220" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
