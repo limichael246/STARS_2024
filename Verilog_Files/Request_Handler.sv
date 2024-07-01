@@ -32,8 +32,9 @@ module request_handler (
 
   //signals from VGA
   input logic write_from_VGA, read_from_VGA, //NOTE: write_from_VGA and data_from_VGA is probably unnecessary 
-  input logic [31:0] adr_from_VGA, data_from_VGA,
-  input logic [3:0] sel_from_VGA,
+  input logic [31:0] adr_from_VGA, 
+  input logic [31:0] data_from_VGA, //NOTEL unnecessary, can be used if adding later
+  input logic [3:0] sel_from_VGA, 
 
   //signal to VGA
   output logic [31:0] data_to_VGA,
@@ -41,11 +42,12 @@ module request_handler (
 
   //signals from UART
   input logic write_from_UART, read_from_UART, //NOTE: read_from_UART and data_to_UART is unused (future use might be considered)
-  input logic [31:0] adr_from_UART, data_from_UART,
+  input logic [31:0] adr_from_UART, //NOTEL unnecessary, can be used if adding later
+  input logic [31:0] data_from_UART, 
   input logic [3:0] sel_from_UART,
 
   //signal to UART
-  output logic [31:0] data_to_UART,
+  output logic [31:0] data_to_UART, //NOTEL unnecessary, can be used if adding later
 
 
   //signals to memory
