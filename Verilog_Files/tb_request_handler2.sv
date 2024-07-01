@@ -12,7 +12,6 @@ module tb;
     integer tb_test_num;
     string tb_test_case;
 
-    
 
     // DUT Ports
     logic clk;
@@ -103,13 +102,92 @@ module tb;
         .sel_to_mem(sel_to_mem)
     );
 
-    // Task to Check CPU_enable
-    task check_;
-        input logic expected_;
+    task check_CPU_enable;
+        input logic expected_CPU_enable;
     begin
-        if ( != ) begin
+        if (expected_CPU_enable != CPU_enable) begin
             $display("Error at test %d: %s", tb_test_num, tb_test_case);
-            $display("Incorrect . Expected: %b, Actual: %b", , );
+            $display("Incorrect CPU_enable. Expected: %b, Actual: %b", expected_CPU_enable, CPU_enable);
+        end
+    end
+    endtask
+
+    task check_data_to_VGA;
+        input logic [31:0] expected_data_to_VGA;
+    begin
+        if (expected_data_to_VGA != data_to_VGA) begin
+            $display("Error at test %d: %s", tb_test_num, tb_test_case);
+            $display("Incorrect data_to_VGA. Expected: %b, Actual: %b", expected_data_to_VGA, data_to_VGA);
+        end
+    end
+    endtask
+
+    task check_instr_data_to_CPU;
+        input logic [31:0] expected_instr_data_to_CPU;
+    begin
+        if (expected_instr_data_to_CPU != instr_data_to_CPU) begin
+            $display("Error at test %d: %s", tb_test_num, tb_test_case);
+            $display("Incorrect instr_data_to_CPU. Expected: %b, Actual: %b", expected_instr_data_to_CPU, instr_data_to_CPU);
+        end
+    end
+    endtask
+
+    task check_data_to_CPU;
+        input logic [31:0] expected_data_to_CPU;
+    begin
+        if (expected_data_to_CPU != data_to_CPU) begin
+            $display("Error at test %d: %s", tb_test_num, tb_test_case);
+            $display("Incorrect data_to_CPU. Expected: %b, Actual: %b", expected_data_to_CPU, data_to_CPU);
+        end
+    end
+    endtask
+
+    task check_mem_read;
+        input logic expected_mem_read;
+    begin
+        if (expected_mem_read != mem_read) begin
+            $display("Error at test %d: %s", tb_test_num, tb_test_case);
+            $display("Incorrect mem_read. Expected: %b, Actual: %b", expected_mem_read, mem_read);
+        end
+    end
+    endtask
+
+    task check_mem_write;
+        input logic expected_mem_write;
+    begin
+        if (expected_mem_write != mem_write) begin
+            $display("Error at test %d: %s", tb_test_num, tb_test_case);
+            $display("Incorrect mem_write. Expected: %b, Actual: %b", expected_mem_write, mem_write);
+        end
+    end
+    endtask
+
+    task check_adr_to_mem;
+        input logic [31:0] expected_adr_to_mem;
+    begin
+        if (expected_adr_to_mem != adr_to_mem) begin
+            $display("Error at test %d: %s", tb_test_num, tb_test_case);
+            $display("Incorrect adr_to_mem. Expected: %b, Actual: %b", expected_adr_to_mem, adr_to_mem);
+        end
+    end
+    endtask
+
+    task check_data_to_mem;
+        input logic [31:0] expected_data_to_mem;
+    begin
+        if (expected_data_to_mem != data_to_mem) begin
+            $display("Error at test %d: %s", tb_test_num, tb_test_case);
+            $display("Incorrect data_to_mem. Expected: %b, Actual: %b", expected_data_to_mem, data_to_mem);
+        end
+    end
+    endtask
+
+    task check_sel_to_mem;
+        input logic [3:0] expected_sel_to_mem;
+    begin
+        if (expected_sel_to_mem != sel_to_mem) begin
+            $display("Error at test %d: %s", tb_test_num, tb_test_case);
+            $display("Incorrect sel_to_mem. Expected: %b, Actual: %b", expected_sel_to_mem, sel_to_mem);
         end
     end
     endtask
@@ -121,6 +199,19 @@ module tb;
         nRst = 0;
         #10;
         nRst = 1;
+
+        mem_busy = 0;
+        VGA_state = INACTIVE;
+        UART_write = 0;
+        UART_adr = 0;
+        data_from_UART = 0;
+        CPU_instr_adr = 0;
+        CPU_data_adr = 0;
+        CPU_read = 0;
+        CPU_write = 0;
+        data_from_CPU = 0;
+        CPU_sel = 0;
+        data_from_mem = 0;
         
     end
     endtask
@@ -132,7 +223,31 @@ module tb;
         $dumpfile("dump.vcd");
         $dumpvars(0, tb);
 
-        
+        //Test 0: Power-on-Reset
+        tb_test_num = 0;
+        tb_test_case = "Power-on-Reset";
+        $display("\n\nTest %d: %s", tb_test_num, tb_test_case);
+        reset_parameters;
+        #10;
+
+        nRst = 0;
+        #10;
+        check_CPU_enable(0);
+        check_data_to_VGA(0);
+        check_instr_data_to_CPU(0);
+        check_data_to_CPU(0);
+        check_mem_read(0);
+        check_mem_write(0);
+        check_adr_to_mem(0);
+        check_data_to_mem(0);
+        check_sel_to_mem(0);
+        nRst = 1;
+
+        //Test 1: mem_busy
+        tb_test_num++;
+        tb_test_case = "mem_busy";
+        $display("\n\nTest %d: %s", tb_test_num, tb_test_case);
+        reset_parameters;
 
 
         $finish;
