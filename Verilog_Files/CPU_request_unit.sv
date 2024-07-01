@@ -1,4 +1,6 @@
 module CPU_request_unit (
+    input logic clk, nRST,
+    
     // From Bus 
     input logic busy_o,
     input logic [31:0] cpu_dat_o,
@@ -23,7 +25,7 @@ module CPU_request_unit (
     typedef enum logic {IDLE, BUSY} StateType;
 
     StateType state, next_state;
-    logic next_write_i, next_read_i, rtype, next_rtype, enable, next_enable, dhit, next_dhit;
+    logic next_write_i, next_read_i, rtype, next_rtype, next_enable, dhit, next_dhit;
     logic [31:0] next_adr_i, next_cpu_dat_i, next_instr, next_data;
     logic [3:0] next_sel_i;
 
