@@ -472,7 +472,17 @@ module tb;
         #5;
         #20;
 
+        /*TODO:
+        next test case should check that data is sent back to CPU
+        and the CPU_enable flag is on
 
+        check a few more cpu test cases after including
+        a store, and a nothing
+
+
+        switch back to VGA afterward 
+
+        */
 
         $finish;
     end
