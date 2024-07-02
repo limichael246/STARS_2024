@@ -1,9 +1,9 @@
 `timescale 1ms/1ps
 
 typedef enum logic [1:0] {
-    INACTIVE = 2'd0,
-    READY = 2'd1,
-    ACTIVE = 2'd2
+    INACTIVE = 2'b00,
+    READY = 2'b01,
+    ACTIVE = 2'b10
 } VGA_state_t;
 
 module tb;
@@ -20,7 +20,6 @@ module tb;
     //signals for controlling inputs/outputs
     logic mem_busy;
     VGA_state_t VGA_state;
-    logic VGA_enable;
     logic CPU_enable;
 
     //signals to/from VGA
@@ -28,10 +27,10 @@ module tb;
     logic [31:0] VGA_adr;
     logic [31:0] data_to_VGA;
 
-    //signals to/from UART
-    logic UART_write;
-    logic [31:0] UART_adr;
-    logic [31:0] data_from_UART;
+    // //signals to/from UART
+    // logic UART_write;
+    // logic [31:0] UART_adr;
+    // logic [31:0] data_from_UART;
 
     //signals to/from CPU
     logic [31:0] CPU_instr_adr;
@@ -49,7 +48,7 @@ module tb;
     logic mem_write;
     logic [31:0] adr_to_mem;
     logic [31:0] data_to_mem;
-    logic [3:0] sel_to_mem;
+    logic [3:0] sel_to_me;
 
 
 
@@ -65,14 +64,13 @@ module tb;
 
 
     // DUT Instance
-    request_handler reqhand (
+    request_handler2 reqhand (
         .clk(clk),
         .nRst(nRst),
 
         //signals for controlling inputs/outputs
         .mem_busy(mem_busy),
         .VGA_state(VGA_state),
-        .VGA_enable(VGA_enable),
         .CPU_enable(CPU_enable),
 
         //signals to/from VGA
@@ -80,10 +78,10 @@ module tb;
         .VGA_adr(VGA_adr),
         .data_to_VGA(data_to_VGA),
 
-        //signals to/from UART
-        .UART_write(UART_write),
-        .UART_adr(UART_adr),
-        .data_from_UART(data_to_UART),
+        // //signals to/from UART
+        // .UART_write(UART_write),
+        // .UART_adr(UART_adr),
+        // .data_from_UART(data_to_UART),
 
         //signals to/from CPU
         .CPU_instr_adr(CPU_instr_adr),
@@ -103,16 +101,6 @@ module tb;
         .data_to_mem(data_to_mem),
         .sel_to_mem(sel_to_mem)
     );
-
-    task check_VGA_enable;
-        input logic expected_VGA_enable;
-    begin
-        if (expected_VGA_enable != VGA_enable) begin
-            $display("Error at test %d: %s", tb_test_num, tb_test_case);
-            $display("Incorrect VGA_enable. Expected: %b, Actual: %b", expected_VGA_enable, VGA_enable);
-        end
-    end
-    endtask
 
     task check_CPU_enable;
         input logic expected_CPU_enable;
@@ -208,13 +196,15 @@ module tb;
     // Task to reset parameters
     task reset_parameters;
     begin
+        nRst = 0;
+        #10;
+        nRst = 1;
+
         mem_busy = 0;
-        VGA_state = ACTIVE;
-        VGA_read = 0;
-        VGA_adr = 0;
-        UART_write = 0;
-        UART_adr = 0;
-        data_from_UART = 0;
+        VGA_state = INACTIVE;
+        // UART_write = 0;
+        // UART_adr = 0;
+        // data_from_UART = 0;
         CPU_instr_adr = 0;
         CPU_data_adr = 0;
         CPU_read = 0;
@@ -222,10 +212,7 @@ module tb;
         data_from_CPU = 0;
         CPU_sel = 0;
         data_from_mem = 0;
-
-        nRst = 0;
-        #10;
-        nRst = 1;
+        
     end
     endtask
 
@@ -287,8 +274,6 @@ module tb;
         check_data_to_mem(0);
         check_sel_to_mem(0);
         #5;
-
-        
 
 
         $finish;
