@@ -1,8 +1,8 @@
-typedef enum logic [1:0] {
-    INACTIVE = 2'd0,
-    READY = 2'd1,
-    ACTIVE = 2'd2
-} VGA_state_t;
+// typedef enum logic [1:0] {
+//     INACTIVE = 2'd0,
+//     READY = 2'd1,
+//     ACTIVE = 2'd2
+// } VGA_state_t;
 
 typedef enum logic [1:0] {
     VGA = 2'd0,
@@ -24,6 +24,7 @@ module request_handler (
     input logic mem_busy,
     input VGA_state_t VGA_state,
     output logic CPU_enable,
+    output logic VGA_enable,
 
     //signals to/from VGA
     input logic VGA_read,
@@ -62,6 +63,7 @@ module request_handler (
             // handler_state <= WAITING;
 
             current_client <= VGA;
+            next_client <= VGA;
 
             instruction <= 32'b0;
         end else begin
@@ -83,59 +85,26 @@ module request_handler (
         // end
 
         //client logic
+        current_client_next = next_client;
         if (mem_busy) begin
-            current_client_next = current_client;
             next_client_next = next_client;
         end else begin
             if (current_client == VGA) begin
                 if (VGA_state == ACTIVE) begin
-                    current_client_next = current_client;
                     next_client_next = VGA;
                 end else begin
-                    current_client_next = current_client;
                     next_client_next = CPU_INSTR;
                 end
             end else if (current_client == CPU_INSTR) begin
-                current_client_next = current_client;
                 next_client_next = CPU_DATA;
             end else begin //current_client == CPU_DATA
                 if (VGA_state == INACTIVE) begin
-                    current_client_next = current_client;
                     next_client_next = CPU_INSTR;
                 end else begin
-                    current_client_next = current_client;
                     next_client_next = VGA;
                 end
             end
         end
-
-        // if (mem_busy) begin
-        //     next_client = current_client;
-
-        // end else begin //handler_state == SEND
-        //     if (current_client == VGA) begin
-        //         if(VGA_state == ACTIVE) begin
-        //             next_client = current_client;
-        //         end else begin
-        //             // next_client = UART;
-        //             next_client = CPU_INSTR;
-        //         end
-
-        //     // end else if (current_client == UART) begin
-        //     //     next_client = CPU_INSTR;
-
-        //     end else if (current_client == CPU_INSTR) begin
-        //         next_client = CPU_DATA;
-
-        //     end else begin // current_client == CPU_DATA
-        //         if(VGA_state == INACTIVE) begin
-        //             next_client = CPU_INSTR;
-        //         end else begin
-        //             next_client = VGA;
-        //         end
-
-        //     end
-        // end
 
 
         //logic for sending data to mem
@@ -147,7 +116,7 @@ module request_handler (
             sel_to_mem =    4'b0;
         end else begin
             if (next_client == VGA) begin
-                mem_read =      1'b1;
+                mem_read =      VGA_read;
                 mem_write =     1'b0;
                 adr_to_mem =    VGA_adr;
                 data_to_mem =   32'b0;
@@ -202,11 +171,16 @@ module request_handler (
         end
 
 
-        //logic for controlling CPU enable
+        //logic for controlling enable signals
         if(~mem_busy & current_client == CPU_DATA) begin
             CPU_enable = 1'b1;
         end else begin
             CPU_enable = 1'b0;
+        end
+        if(~mem_busy & current_client == VGA) begin
+            VGA_enable = 1'b1;
+        end else begin
+            VGA_enable = 1'b0;
         end
         
     end

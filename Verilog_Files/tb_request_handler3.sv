@@ -21,6 +21,7 @@ module tb;
     logic mem_busy;
     VGA_state_t VGA_state;
     logic CPU_enable;
+    logic VGA_enable;
 
     //signals to/from VGA
     logic VGA_read;
@@ -48,23 +49,23 @@ module tb;
     logic mem_write;
     logic [31:0] adr_to_mem;
     logic [31:0] data_to_mem;
-    logic [3:0] sel_to_me;
+    logic [3:0] sel_to_mem;
 
 
 
     //Clock generation block
     localparam CLK_PERIOD = 10; // 100 Hz clk
     always begin
-        clk = 1'b0;
-        #(CLK_PERIOD / 2.0);
         clk = 1'b1;
+        #(CLK_PERIOD / 2.0);
+        clk = 1'b0;
         #(CLK_PERIOD / 2.0);
     end
 
 
 
     // DUT Instance
-    request_handler2 reqhand (
+    request_handler reqhand (
         .clk(clk),
         .nRst(nRst),
 
@@ -72,6 +73,7 @@ module tb;
         .mem_busy(mem_busy),
         .VGA_state(VGA_state),
         .CPU_enable(CPU_enable),
+        .VGA_enable(VGA_enable),
 
         //signals to/from VGA
         .VGA_read(VGA_read),
@@ -108,6 +110,16 @@ module tb;
         if (expected_CPU_enable != CPU_enable) begin
             $display("Error at test %d: %s", tb_test_num, tb_test_case);
             $display("Incorrect CPU_enable. Expected: %b, Actual: %b", expected_CPU_enable, CPU_enable);
+        end
+    end
+    endtask
+
+    task check_VGA_enable;
+        input logic expected_VGA_enable;
+    begin
+        if (expected_VGA_enable != VGA_enable) begin
+            $display("Error at test %d: %s", tb_test_num, tb_test_case);
+            $display("Incorrect VGA_enable. Expected: %b, Actual: %b", expected_VGA_enable, VGA_enable);
         end
     end
     endtask
@@ -231,9 +243,9 @@ module tb;
         #10;
 
         nRst = 0;
-        #10;
-        check_VGA_enable(0);
+        #5;
         check_CPU_enable(0);
+        check_VGA_enable(0);
         check_data_to_VGA(0);
         check_instr_data_to_CPU(0);
         check_data_to_CPU(0);
@@ -242,11 +254,14 @@ module tb;
         check_adr_to_mem(0);
         check_data_to_mem(0);
         check_sel_to_mem(4'b1111);
+        #5;
         nRst = 1;
 
-        //Test 1: VGA cycling
+
+
+        //Test 1-2: VGA cycling
         tb_test_num++;
-        tb_test_case = "VGA cycling";
+        tb_test_case = "VGA cycle 1";
         $display("\n\nTest %d: %s", tb_test_num, tb_test_case);
         reset_parameters;
 
@@ -263,6 +278,7 @@ module tb;
         check_adr_to_mem(32'hABCDE);
         check_data_to_mem(32'h0);
         check_sel_to_mem(4'b1111);
+        check_VGA_enable(1'b1);
         #5;
 
         //simulate memory receiving data
@@ -273,7 +289,189 @@ module tb;
         check_adr_to_mem(0);
         check_data_to_mem(0);
         check_sel_to_mem(0);
+        check_VGA_enable(0);
         #5;
+        #20;
+
+        tb_test_num++;
+        tb_test_case = "VGA cycle 2";
+        $display("\n\nTest %d: %s", tb_test_num, tb_test_case);
+
+        //simulate memory sending back data to VGA and VGA sending new request
+        mem_busy = 0;
+        data_from_mem = 32'hABCDE101;
+
+        VGA_read = 1'b1;
+        VGA_adr = 32'hBCDE;
+        #5;
+        check_data_to_VGA(32'hABCDE101);
+
+        check_mem_read(1'b1);
+        check_mem_write(1'b0);
+        check_adr_to_mem(32'hBCDE);
+        check_data_to_mem(32'h0);
+        check_sel_to_mem(4'b1111);
+        check_VGA_enable(1'b1);
+        #5;
+
+        //simulate memory receiving data
+        mem_busy = 1;
+        #5;
+        check_mem_read(0);
+        check_mem_write(0);
+        check_adr_to_mem(0);
+        check_data_to_mem(0);
+        check_sel_to_mem(0);
+        check_VGA_enable(0);
+        #5;
+        #20;
+
+        tb_test_num++;
+        tb_test_case = "VGA cycle 3,4 - nothing";
+        $display("\n\nTest %d: %s", tb_test_num, tb_test_case);
+
+        //simulate memory sending back data to VGA and VGA not sending a request
+        mem_busy = 0;
+        data_from_mem = 32'hBCDE101;
+
+        VGA_read = 1'b0;
+        VGA_adr = 32'h0;
+        #5;
+        check_data_to_VGA(32'hBCDE101);
+
+        check_mem_read(1'b0);
+        check_mem_write(1'b0);
+        check_adr_to_mem(32'h0);
+        check_data_to_mem(32'h0);
+        check_sel_to_mem(4'b1111);
+        check_VGA_enable(1'b1);
+        #5;
+
+        //send another empty request
+        mem_busy = 0;
+        data_from_mem = 32'hBCDE101;
+
+        VGA_read = 1'b0;
+        VGA_adr = 32'h0;
+        #5;
+        check_data_to_VGA(32'hBCDE101);
+
+        check_mem_read(1'b0);
+        check_mem_write(1'b0);
+        check_adr_to_mem(32'h0);
+        check_data_to_mem(32'h0);
+        check_sel_to_mem(4'b1111);
+        check_VGA_enable(1'b1);
+        #5;
+
+        tb_test_num++;
+        tb_test_case = "VGA cycle 5";
+        $display("\n\nTest %d: %s", tb_test_num, tb_test_case);
+
+        //VGA sends actual data this time
+        mem_busy = 0;
+        data_from_mem = 32'hBCDE101;
+
+        VGA_read = 1'b1;
+        VGA_adr = 32'hCDE;
+        #5;
+        check_data_to_VGA(32'hBCDE101);
+
+        check_mem_read(1'b1);
+        check_mem_write(1'b0);
+        check_adr_to_mem(32'hCDE);
+        check_data_to_mem(32'h0);
+        check_sel_to_mem(4'b1111);
+        check_VGA_enable(1'b1);
+        #5;
+
+        //simulate memory receiving data
+        mem_busy = 1;
+        #5;
+        check_mem_read(0);
+        check_mem_write(0);
+        check_adr_to_mem(0);
+        check_data_to_mem(0);
+        check_sel_to_mem(0);
+        check_VGA_enable(0);
+        #5;
+        #20;
+        
+        //switch client to CPU
+        tb_test_num++;
+        tb_test_case = "CPU cycle 1 - instruction";
+        $display("\n\nTest %d: %s", tb_test_num, tb_test_case);
+
+        VGA_state = INACTIVE;
+
+        //make data is still sent to VGA while now receiving instruction data from CPU
+        mem_busy = 0;
+        data_from_mem = 32'hCDE101;
+
+        CPU_instr_adr = 32'hCAB1;
+        #5;
+        check_data_to_VGA(32'hCDE101);
+        check_data_to_CPU(32'h0);
+
+        check_mem_read(1'b1);
+        check_mem_write(1'b0);
+        check_adr_to_mem(32'hCAB1);
+        check_data_to_mem(32'h0);
+        check_sel_to_mem(4'b1111);
+        check_VGA_enable(1'b1);
+        check_CPU_enable(1'b0);
+        #5;
+
+        //simulate memory receiving data
+        mem_busy = 1;
+        #5;
+        check_mem_read(0);
+        check_mem_write(0);
+        check_adr_to_mem(0);
+        check_data_to_mem(0);
+        check_sel_to_mem(0);
+        check_VGA_enable(0);
+        check_CPU_enable(0);
+        #5;
+        #20;
+
+        //check CPU receives data and send a load command from CPU
+        tb_test_num++;
+        tb_test_case = "CPU cycle 1 - data";
+        $display("\n\nTest %d: %s", tb_test_num, tb_test_case);
+        
+        mem_busy = 0;
+        data_from_mem = 32'hCAB101;
+
+        CPU_data_adr = 32'hFAB1;
+        CPU_read = 1'b1;
+        CPU_write = 1'b0;
+        CPU_sel = 4'b1111;
+        #5;
+        check_data_to_CPU(32'hCAB101);
+
+        check_mem_read(1'b1);
+        check_mem_write(1'b0);
+        check_adr_to_mem(32'hFAB1);
+        check_data_to_mem(32'h0);
+        check_sel_to_mem(4'b1111);
+        check_VGA_enable(1'b0);
+        check_CPU_enable(1'b0);
+        #5;
+
+        //simulate memory receiving data
+        mem_busy = 1;
+        #5;
+        check_mem_read(0);
+        check_mem_write(0);
+        check_adr_to_mem(0);
+        check_data_to_mem(0);
+        check_sel_to_mem(0);
+        check_VGA_enable(0);
+        check_CPU_enable(0);
+        #5;
+        #20;
+
 
 
         $finish;
