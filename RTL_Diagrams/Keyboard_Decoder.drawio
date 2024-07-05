@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T21:34:38.125Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="zk231Myn-Q3NqyqpxYgU" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-07-05T14:13:50.384Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="HSL5f5h3uOs6dnuxWPm-" version="24.6.4" type="github">
   <diagram name="Page-1" id="hJIKlYoYh9tqUhOvAnFu">
-    <mxGraphModel dx="1364" dy="756" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1604" dy="756" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -110,7 +110,7 @@
         <mxCell id="n4ZOIPBennIeKUP7Elqf-5" value="receive_out" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="385" y="312" width="80" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="n4ZOIPBennIeKUP7Elqf-6" value="Clock Counter" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="n4ZOIPBennIeKUP7Elqf-6" value="BAUD Counter" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="475" y="280" width="140" height="165" as="geometry" />
         </mxCell>
         <mxCell id="n4ZOIPBennIeKUP7Elqf-7" value="Bit Counter" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -211,7 +211,7 @@
         <mxCell id="n4ZOIPBennIeKUP7Elqf-35" value="receive_in" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="792" y="240" width="73" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="n4ZOIPBennIeKUP7Elqf-36" value="Register" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="n4ZOIPBennIeKUP7Elqf-36" value="Parity Check&amp;nbsp;&lt;div&gt;Register&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="950" y="332.5" width="150" height="177.5" as="geometry" />
         </mxCell>
         <mxCell id="n4ZOIPBennIeKUP7Elqf-37" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" parent="1" edge="1">
